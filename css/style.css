@@ -1,0 +1,186 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box
+}
+
+body {
+  background-image: url('/images/background.png');
+  background-size: 100%;
+  font-family: Verdana, sans-serif;
+  margin: 0
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -200px;
+
+}
+
+.logo {
+  position: relative;
+  margin-top: -13px;
+  margin-left: 15px;
+  height: 200px;
+  width: auto;
+
+}
+
+nav ul{
+  display:flex;
+  color: #000000;
+  list-style: none;
+  font-size: 12px;
+  align-items: center;
+
+}
+nav ul li {
+  margin: 0 35px;
+}
+
+.square {
+  position: relative;
+  width: 20px;
+  height: 90px;
+  margin-right: -30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: -85px;
+    height: 35px;
+    width: 20px;
+    border-radius: 5px;
+    background: #ff9600;
+    transform: skewX(160deg);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background: #ff9600;
+  }
+}
+
+.square a {
+  position: relative;
+  float: left;
+  color: #000000;
+  margin-left: 30px;
+  margin-top: 39px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.square2 {
+  position: relative;
+  width: 20px;
+  height: 90px;
+  list-style: none;
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 180px;
+    height: 35px;
+    width: 20px;
+    border-radius: 5px;
+    background: #ff9600;
+    transform: skewX(160deg);
+    margin: 55px 0px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background: #ff9600;
+    margin: 55px 90px;
+  }
+}
+
+.square2 a {
+  position: absolute;
+  color: #000000;
+  margin: 65px 100px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.photo-section {
+  display: none
+}
+
+.image {
+  max-width: 100%;
+  margin-top: -187px;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: absolute;
+}
+
+.text-section {
+  position: absolute;
+  color: #000000;
+  width: 30%;
+  margin-left: 130px;
+  margin-top: 90px;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
