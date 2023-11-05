@@ -117,6 +117,33 @@ nav ul li {
   font-size: 12px;
 }
 
+.tri-square{
+  position: relative;
+  width: 20px;
+  height: 90px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 180px;
+    height: 35px;
+    width: 20px;
+    border-radius: 5px;
+    background: #ff9600;
+    transform: skewX(160deg);
+    margin: 55px 0px;
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background: #ff9600;
+  }
+}
+
 .photo-section {
   display: none
 }
