@@ -1,22 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400&display=swap');
 *{
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box
+  font-family: 'Teko', sans-serif;
+  
 }
 
 body {
   background-image: url('/images/background.png');
   background-size: 100%;
-  font-family: Verdana, sans-serif;
-  margin: 0
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: -200px;
+.container{
+  width: 100%;
+  min-height: 50vh;
+  overflow: hidden;
+  box-sizing: border-box;
 
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -24,20 +30,27 @@ nav {
   margin-top: -13px;
   margin-left: 15px;
   height: 200px;
-  width: auto;
+  cursor: pointer;
 
 }
 
-nav ul{
+.navbar ul{
   display:flex;
   color: #000000;
   list-style: none;
-  font-size: 12px;
-  align-items: center;
+  font-size: 18px;
 
 }
-nav ul li {
+.navbar ul li {
   margin: 0 35px;
+}
+
+
+.menu-logo{
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  display: none;
 }
 
 .square {
@@ -117,37 +130,6 @@ nav ul li {
   font-size: 12px;
 }
 
-.tri-square{
-  position: relative;
-  width: 20px;
-  height: 90px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 180px;
-    height: 35px;
-    width: 20px;
-    border-radius: 5px;
-    background: #ff9600;
-    transform: skewX(160deg);
-    margin: 55px 0px;
-  }
-
-  &::before {
-    content: "";
-    position: relative;
-    width: 100px;
-    height: 35px;
-    border-radius: 5px;
-    background: #ff9600;
-  }
-}
-
-.photo-section {
-  display: none
-}
-
 .image {
   max-width: 100%;
   margin-top: -187px;
@@ -192,6 +174,14 @@ nav ul li {
   animation-duration: 1.5s;
 }
 
+footer {
+  background-color: #ff9600;
+  color: white;
+  width: 8%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+}
 @keyframes fade {
   from {
     opacity: .4
@@ -204,6 +194,10 @@ nav ul li {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
+
+  .navbar{
+    display: block;
+  }
 
   .prev,
   .next,
