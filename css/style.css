@@ -81,6 +81,11 @@ nav a {
   text-decoration: none;
   font-size: 18px;
 }
+
+.menu{
+  display: block;
+  width: 30px;
+}
 /*done*/
 .square2 {
   position: relative;
@@ -179,5 +184,8 @@ nav a {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
+  .menu{
+    display: block;
+  }
 
 }
