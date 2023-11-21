@@ -83,7 +83,7 @@ nav a {
 }
 
 .menu{
-  display: block;
+  display: none;
   width: 30px;
 }
 /*done*/
@@ -133,11 +133,42 @@ nav a {
   z-index: -1;
 }
 
+.pointer {
+  width: 100px;
+  height: 150px;
+  position: relative;
+  background: #ff9600;
+  margin-top: -210px;
+  z-index: -2;
+}
+.pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+}
+.pointer:before {
+  content: "";
+  position: absolute;
+  right: -50px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid #ff9600;
+  border-top: 70px solid transparent;
+  border-bottom: 80px solid transparent;
+}
+
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .text-section {
