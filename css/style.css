@@ -203,6 +203,40 @@ nav a {
   animation-duration: 1.5s;
 }
 
+.fa {
+  padding: 2px;
+  font-size: 15px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 7px 75px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: black;
+  color: #ff9600;
+}
+
+.fa-twitter {
+  background: black;
+  color: #ff9600;
+}
+
+.fa-google {
+  background: black;
+  color: #ff9600;
+}
+
+.fa-instagram {
+  background: black;
+  color: #ff9600;
+}
+
 @keyframes fade {
   from {
     opacity: .4
